@@ -1,0 +1,1733 @@
+[
+  {
+    "FileName": "RestClient.Sync.cs",
+    "Differences": {
+      "OldText": {
+        "Lines": [
+          {
+            "Type": 0,
+            "Position": 1095,
+            "Text": "<table class=\"lineAnalysis\">",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1096,
+            "Text": "<thead><tr><th></th><th>#</th><th>Line</th><th></th><th>Line Coverage</th></tr></thead>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1097,
+            "Text": "<tbody>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1098,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>#if&nbsp;FRAMEWORK&nbsp;||&nbsp;PocketPC</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1099,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>using&nbsp;System;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": null,
+            "Text": null,
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1100,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1101,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>namespace&nbsp;RestSharp</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1102,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1103,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;partial&nbsp;class&nbsp;RestClient</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1104,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1105,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;summary&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1106,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;Executes&nbsp;the&nbsp;specified&nbsp;request&nbsp;and&nbsp;downloads&nbsp;the&nbsp;response&nbsp;data</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1107,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;/summary&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1108,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;param&nbsp;name=&quot;request&quot;&gt;Request&nbsp;to&nbsp;execute&lt;/param&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1109,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;returns&gt;Response&nbsp;data&lt;/returns&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1110,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;byte[]&nbsp;DownloadData(IRestRequest&nbsp;request)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1111,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1112,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;response&nbsp;=&nbsp;Execute(request);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 4,
+            "Position": 1113,
+            "Text": "<tr class=\"danger\" data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;response.RawBytes;</code></td></tr>",
+            "SubPieces": [
+              {
+                "Type": 0,
+                "Position": 1,
+                "Text": "<tr ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 2,
+                "Text": "data-coverage=\"{",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 3,
+                "Text": "'AllTestMethods': ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 4,
+                "Text": "{",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 5,
+                "Text": "'VC': ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 6,
+                "Text": "'1',",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 7,
+                "Text": " ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 8,
+                "Text": "'LVS': ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 9,
+                "Text": "'green'}",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 10,
+                "Text": "}",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 11,
+                "Text": "\"><td ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 12,
+                "Text": "class=\"green\">&nbsp;</td><td ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 13,
+                "Text": "class=\"leftmargin ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 14,
+                "Text": "rightmargin ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 15,
+                "Text": "right\">1</td><td></td><td ",
+                "SubPieces": []
+              },
+              {
+                "Type": 1,
+                "Position": 16,
+                "Text": "class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;response.",
+                "SubPieces": []
+              },
+              {
+                "Type": 1,
+                "Position": 17,
+                "Text": "RawBytes;</code></td></tr>",
+                "SubPieces": []
+              },
+              {
+                "Type": 3,
+                "Position": null,
+                "Text": null,
+                "SubPieces": []
+              },
+              {
+                "Type": 3,
+                "Position": null,
+                "Text": null,
+                "SubPieces": []
+              },
+              {
+                "Type": 3,
+                "Position": null,
+                "Text": null,
+                "SubPieces": []
+              },
+              {
+                "Type": 3,
+                "Position": null,
+                "Text": null,
+                "SubPieces": []
+              }
+            ]
+          },
+          {
+            "Type": 0,
+            "Position": 1114,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1115,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1116,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;summary&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1117,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;Executes&nbsp;the&nbsp;request&nbsp;and&nbsp;returns&nbsp;a&nbsp;response,&nbsp;authenticating&nbsp;if&nbsp;needed</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1118,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;/summary&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1119,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;param&nbsp;name=&quot;request&quot;&gt;Request&nbsp;to&nbsp;be&nbsp;executed&lt;/param&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1120,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;returns&gt;RestResponse&lt;/returns&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1121,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;virtual&nbsp;IRestResponse&nbsp;Execute(IRestRequest&nbsp;request)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1122,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1123,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>#if&nbsp;PocketPC</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1124,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;method&nbsp;=&nbsp;request.Method.ToString();</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1125,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>#else</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1126,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;method&nbsp;=&nbsp;Enum.GetName(typeof&nbsp;(Method),&nbsp;request.Method);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1127,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>#endif</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1128,
+            "Text": "<tr title=\"1 of 8 branches are covered\" data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td class=\"branch coverage10\">&nbsp;</td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch&nbsp;(request.Method)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1129,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1130,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;Method.POST:</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1131,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;Method.PUT:</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1132,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;Method.PATCH:</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1133,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;Method.MERGE:</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1134,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Execute(request,&nbsp;method,&nbsp;DoExecuteAsPost);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1135,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1136,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1137,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Execute(request,&nbsp;method,&nbsp;DoExecuteAsGet);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1138,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1139,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1140,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1141,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IRestResponse&nbsp;ExecuteAsGet(IRestRequest&nbsp;request,&nbsp;string&nbsp;httpMethod)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1142,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1143,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Execute(request,&nbsp;httpMethod,&nbsp;DoExecuteAsGet);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1144,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1145,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1146,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IRestResponse&nbsp;ExecuteAsPost(IRestRequest&nbsp;request,&nbsp;string&nbsp;httpMethod)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1147,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1148,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Method&nbsp;=&nbsp;Method.POST;&nbsp;//&nbsp;Required&nbsp;by&nbsp;RestClient.BuildUri...</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1149,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Execute(request,&nbsp;httpMethod,&nbsp;DoExecuteAsPost);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1150,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1151,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1152,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;IRestResponse&nbsp;Execute(IRestRequest&nbsp;request,&nbsp;string&nbsp;httpMethod,</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1153,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Func&lt;IHttp,&nbsp;string,&nbsp;HttpResponse&gt;&nbsp;getResponse)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1154,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1155,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AuthenticateIfNeeded(this,&nbsp;request);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1156,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1157,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IRestResponse&nbsp;response&nbsp;=&nbsp;new&nbsp;RestResponse();</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1158,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1159,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1160,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1161,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;http&nbsp;=&nbsp;HttpFactory.Create();</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1162,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1163,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ConfigureHttp(request,&nbsp;http);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1164,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1165,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response&nbsp;=&nbsp;ConvertToRestResponse(request,&nbsp;getResponse(http,&nbsp;httpMethod));</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1166,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.Request&nbsp;=&nbsp;request;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1167,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.Request.IncreaseNumAttempts();</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1168,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1169,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1170,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catch&nbsp;(Exception&nbsp;ex)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1171,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1172,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.ResponseStatus&nbsp;=&nbsp;ResponseStatus.Error;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1173,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.ErrorMessage&nbsp;=&nbsp;ex.Message;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1174,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.ErrorException&nbsp;=&nbsp;ex;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1175,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1176,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1177,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;response;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1178,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1179,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1180,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;HttpResponse&nbsp;DoExecuteAsGet(IHttp&nbsp;http,&nbsp;string&nbsp;method)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1181,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1182,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;http.AsGet(method);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1183,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1184,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1185,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;HttpResponse&nbsp;DoExecuteAsPost(IHttp&nbsp;http,&nbsp;string&nbsp;method)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1186,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1187,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;http.AsPost(method);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1188,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1189,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1190,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;summary&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1191,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;Executes&nbsp;the&nbsp;specified&nbsp;request&nbsp;and&nbsp;deserializes&nbsp;the&nbsp;response&nbsp;content&nbsp;using&nbsp;the&nbsp;appropriate&nbsp;content&nbsp;handler</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1192,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;/summary&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1193,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;typeparam&nbsp;name=&quot;T&quot;&gt;Target&nbsp;deserialization&nbsp;type&lt;/typeparam&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1194,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;param&nbsp;name=&quot;request&quot;&gt;Request&nbsp;to&nbsp;execute&lt;/param&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1195,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;returns&gt;RestResponse[[T]]&nbsp;with&nbsp;deserialized&nbsp;data&nbsp;in&nbsp;Data&nbsp;property&lt;/returns&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1196,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;virtual&nbsp;IRestResponse&lt;T&gt;&nbsp;Execute&lt;T&gt;(IRestRequest&nbsp;request)&nbsp;where&nbsp;T&nbsp;:&nbsp;new()</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1197,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1198,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Deserialize&lt;T&gt;(request,&nbsp;Execute(request));</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1199,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1200,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1201,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IRestResponse&lt;T&gt;&nbsp;ExecuteAsGet&lt;T&gt;(IRestRequest&nbsp;request,&nbsp;string&nbsp;httpMethod)&nbsp;where&nbsp;T&nbsp;:&nbsp;new()</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1202,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1203,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Deserialize&lt;T&gt;(request,&nbsp;ExecuteAsGet(request,&nbsp;httpMethod));</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1204,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1205,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1206,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IRestResponse&lt;T&gt;&nbsp;ExecuteAsPost&lt;T&gt;(IRestRequest&nbsp;request,&nbsp;string&nbsp;httpMethod)&nbsp;where&nbsp;T&nbsp;:&nbsp;new()</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1207,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1208,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Deserialize&lt;T&gt;(request,&nbsp;ExecuteAsPost(request,&nbsp;httpMethod));</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1209,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1210,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1211,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1212,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1213,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>#endif</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1214,
+            "Text": "</tbody>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1215,
+            "Text": "</table>",
+            "SubPieces": []
+          }
+        ]
+      },
+      "NewText": {
+        "Lines": [
+          {
+            "Type": 0,
+            "Position": 1095,
+            "Text": "<table class=\"lineAnalysis\">",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1096,
+            "Text": "<thead><tr><th></th><th>#</th><th>Line</th><th></th><th>Line Coverage</th></tr></thead>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1097,
+            "Text": "<tbody>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1098,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>#if&nbsp;FRAMEWORK&nbsp;||&nbsp;PocketPC</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1099,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>using&nbsp;System;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1100,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>using&nbsp;System.Text;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1101,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1102,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>namespace&nbsp;RestSharp</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1103,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1104,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;partial&nbsp;class&nbsp;RestClient</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1105,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1106,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;summary&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1107,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;Executes&nbsp;the&nbsp;specified&nbsp;request&nbsp;and&nbsp;downloads&nbsp;the&nbsp;response&nbsp;data</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1108,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;/summary&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1109,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;param&nbsp;name=&quot;request&quot;&gt;Request&nbsp;to&nbsp;execute&lt;/param&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1110,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;returns&gt;Response&nbsp;data&lt;/returns&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1111,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;byte[]&nbsp;DownloadData(IRestRequest&nbsp;request)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1112,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1113,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;response&nbsp;=&nbsp;Execute(request);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 4,
+            "Position": 1114,
+            "Text": "<tr class=\"danger\" data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Encoding.ASCII.GetBytes(response.Content);</code></td></tr>",
+            "SubPieces": [
+              {
+                "Type": 0,
+                "Position": 1,
+                "Text": "<tr ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 2,
+                "Text": "data-coverage=\"{",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 3,
+                "Text": "'AllTestMethods': ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 4,
+                "Text": "{",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 5,
+                "Text": "'VC': ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 6,
+                "Text": "'1',",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 7,
+                "Text": " ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 8,
+                "Text": "'LVS': ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 9,
+                "Text": "'green'}",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 10,
+                "Text": "}",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 11,
+                "Text": "\"><td ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 12,
+                "Text": "class=\"green\">&nbsp;</td><td ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 13,
+                "Text": "class=\"leftmargin ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 14,
+                "Text": "rightmargin ",
+                "SubPieces": []
+              },
+              {
+                "Type": 0,
+                "Position": 15,
+                "Text": "right\">1</td><td></td><td ",
+                "SubPieces": []
+              },
+              {
+                "Type": 2,
+                "Position": 16,
+                "Text": "class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Encoding.",
+                "SubPieces": []
+              },
+              {
+                "Type": 2,
+                "Position": 17,
+                "Text": "ASCII.",
+                "SubPieces": []
+              },
+              {
+                "Type": 2,
+                "Position": 18,
+                "Text": "GetBytes(",
+                "SubPieces": []
+              },
+              {
+                "Type": 2,
+                "Position": 19,
+                "Text": "response.",
+                "SubPieces": []
+              },
+              {
+                "Type": 2,
+                "Position": 20,
+                "Text": "Content)",
+                "SubPieces": []
+              },
+              {
+                "Type": 2,
+                "Position": 21,
+                "Text": ";</code></td></tr>",
+                "SubPieces": []
+              }
+            ]
+          },
+          {
+            "Type": 0,
+            "Position": 1115,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1116,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1117,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;summary&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1118,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;Executes&nbsp;the&nbsp;request&nbsp;and&nbsp;returns&nbsp;a&nbsp;response,&nbsp;authenticating&nbsp;if&nbsp;needed</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1119,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;/summary&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1120,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;param&nbsp;name=&quot;request&quot;&gt;Request&nbsp;to&nbsp;be&nbsp;executed&lt;/param&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1121,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;returns&gt;RestResponse&lt;/returns&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1122,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;virtual&nbsp;IRestResponse&nbsp;Execute(IRestRequest&nbsp;request)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1123,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1124,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>#if&nbsp;PocketPC</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1125,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;method&nbsp;=&nbsp;request.Method.ToString();</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1126,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>#else</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1127,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;method&nbsp;=&nbsp;Enum.GetName(typeof&nbsp;(Method),&nbsp;request.Method);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1128,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>#endif</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1129,
+            "Text": "<tr title=\"1 of 8 branches are covered\" data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td class=\"branch coverage10\">&nbsp;</td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch&nbsp;(request.Method)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1130,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1131,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;Method.POST:</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1132,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;Method.PUT:</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1133,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;Method.PATCH:</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1134,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;Method.MERGE:</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1135,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Execute(request,&nbsp;method,&nbsp;DoExecuteAsPost);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1136,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1137,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1138,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Execute(request,&nbsp;method,&nbsp;DoExecuteAsGet);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1139,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1140,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1141,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1142,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IRestResponse&nbsp;ExecuteAsGet(IRestRequest&nbsp;request,&nbsp;string&nbsp;httpMethod)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1143,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1144,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Execute(request,&nbsp;httpMethod,&nbsp;DoExecuteAsGet);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1145,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1146,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1147,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IRestResponse&nbsp;ExecuteAsPost(IRestRequest&nbsp;request,&nbsp;string&nbsp;httpMethod)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1148,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1149,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Method&nbsp;=&nbsp;Method.POST;&nbsp;//&nbsp;Required&nbsp;by&nbsp;RestClient.BuildUri...</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1150,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Execute(request,&nbsp;httpMethod,&nbsp;DoExecuteAsPost);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1151,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1152,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1153,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;IRestResponse&nbsp;Execute(IRestRequest&nbsp;request,&nbsp;string&nbsp;httpMethod,</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1154,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Func&lt;IHttp,&nbsp;string,&nbsp;HttpResponse&gt;&nbsp;getResponse)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1155,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1156,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AuthenticateIfNeeded(this,&nbsp;request);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1157,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1158,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IRestResponse&nbsp;response&nbsp;=&nbsp;new&nbsp;RestResponse();</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1159,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1160,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1161,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1162,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;http&nbsp;=&nbsp;HttpFactory.Create();</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1163,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1164,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ConfigureHttp(request,&nbsp;http);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1165,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1166,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response&nbsp;=&nbsp;ConvertToRestResponse(request,&nbsp;getResponse(http,&nbsp;httpMethod));</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1167,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.Request&nbsp;=&nbsp;request;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1168,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.Request.IncreaseNumAttempts();</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1169,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1170,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1171,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catch&nbsp;(Exception&nbsp;ex)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1172,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1173,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.ResponseStatus&nbsp;=&nbsp;ResponseStatus.Error;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1174,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.ErrorMessage&nbsp;=&nbsp;ex.Message;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1175,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.ErrorException&nbsp;=&nbsp;ex;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1176,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1177,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1178,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;response;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1179,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1180,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1181,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;HttpResponse&nbsp;DoExecuteAsGet(IHttp&nbsp;http,&nbsp;string&nbsp;method)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1182,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1183,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;http.AsGet(method);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1184,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}\"><td class=\"green\">&nbsp;</td><td class=\"leftmargin rightmargin right\">1</td><td></td><td class=\"lightgreen\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1185,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1186,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;HttpResponse&nbsp;DoExecuteAsPost(IHttp&nbsp;http,&nbsp;string&nbsp;method)</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1187,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1188,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;http.AsPost(method);</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1189,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1190,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1191,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;summary&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1192,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;Executes&nbsp;the&nbsp;specified&nbsp;request&nbsp;and&nbsp;deserializes&nbsp;the&nbsp;response&nbsp;content&nbsp;using&nbsp;the&nbsp;appropriate&nbsp;content&nbsp;handler</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1193,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;/summary&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1194,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;typeparam&nbsp;name=&quot;T&quot;&gt;Target&nbsp;deserialization&nbsp;type&lt;/typeparam&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1195,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;param&nbsp;name=&quot;request&quot;&gt;Request&nbsp;to&nbsp;execute&lt;/param&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1196,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;returns&gt;RestResponse[[T]]&nbsp;with&nbsp;deserialized&nbsp;data&nbsp;in&nbsp;Data&nbsp;property&lt;/returns&gt;</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1197,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;virtual&nbsp;IRestResponse&lt;T&gt;&nbsp;Execute&lt;T&gt;(IRestRequest&nbsp;request)&nbsp;where&nbsp;T&nbsp;:&nbsp;new()</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1198,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1199,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Deserialize&lt;T&gt;(request,&nbsp;Execute(request));</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1200,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1201,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1202,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IRestResponse&lt;T&gt;&nbsp;ExecuteAsGet&lt;T&gt;(IRestRequest&nbsp;request,&nbsp;string&nbsp;httpMethod)&nbsp;where&nbsp;T&nbsp;:&nbsp;new()</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1203,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1204,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Deserialize&lt;T&gt;(request,&nbsp;ExecuteAsGet(request,&nbsp;httpMethod));</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1205,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1206,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1207,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IRestResponse&lt;T&gt;&nbsp;ExecuteAsPost&lt;T&gt;(IRestRequest&nbsp;request,&nbsp;string&nbsp;httpMethod)&nbsp;where&nbsp;T&nbsp;:&nbsp;new()</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1208,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1209,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Deserialize&lt;T&gt;(request,&nbsp;ExecuteAsPost(request,&nbsp;httpMethod));</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1210,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}\"><td class=\"red\">&nbsp;</td><td class=\"leftmargin rightmargin right\">0</td><td></td><td class=\"lightred\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1211,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1212,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>}</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1213,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code></code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1214,
+            "Text": "<tr data-coverage=\"{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}\"><td class=\"gray\">&nbsp;</td><td class=\"leftmargin rightmargin right\"></td><td></td><td class=\"lightgray\"><code>#endif</code></td></tr>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1215,
+            "Text": "</tbody>",
+            "SubPieces": []
+          },
+          {
+            "Type": 0,
+            "Position": 1216,
+            "Text": "</table>",
+            "SubPieces": []
+          }
+        ]
+      }
+    }
+  }
+]

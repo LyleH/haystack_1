@@ -1,0 +1,31 @@
+<h2>Vote On Polls</h2>
+<i>Click on a poll for more details.</i>
+<br />
+<div ng-repeat="poll in polls" class="pollDiv">
+    <div class="pollText">
+        <div class="pollTitle">
+            <div class="pollHeaderLeft"><b>{{poll.name}}</b></div>
+            <div class="pollHeaderRight">
+                <label>
+                    <font class="chkLabel">Show/Hide</font>
+                    <input class="pollShowHide" type="checkbox" name="pollName_{{poll.id}}" ng-model="showPoll">
+                </label>
+            </div>
+        </div>
+        <div class="pollContents" ng-show="showPoll">
+            <i>{{poll.question}}</i>
+
+            <form class="pollForm" name="form_poll_{{poll.id}}" method="post">
+                <div ng-repeat="answer in answers" ng-if="(answer.pollid == poll.id)" 
+                    class="pollChoice">
+                    <label>
+                        <input type="radio" name="radios_{{poll.id}}" value="{{answer.pos}}">
+                        {{answer.text}}
+                    </label>
+                </div>
+                <input id="submit_{{poll.id}}" type="submit" name="submit_{{poll.id}}" value="Submit Answer">
+            </form>
+        </div>
+    </div>
+</div>
+<p>Author: {{ author }}</p>

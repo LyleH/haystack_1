@@ -1,0 +1,671 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Blacks</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="Content/report.css">
+    <link rel="stylesheet" href="Content/bootstrap.cyborg.css">
+    <link rel="stylesheet" href="Content/animate.min.css">
+    <style type="text/css">
+        .carousel-fade .carousel-inner .item {
+          opacity: 0;
+          -webkit-transition-property: opacity;
+                  transition-property: opacity;
+        }
+        .carousel-fade .carousel-inner .active {
+          opacity: 1;
+        }
+        .carousel-fade .carousel-inner .active.left,
+        .carousel-fade .carousel-inner .active.right {
+          left: 0;
+          opacity: 0;
+          z-index: 1;
+        }
+        .carousel-fade .carousel-inner .next.left,
+        .carousel-fade .carousel-inner .prev.right {
+          opacity: 1;
+        }
+        .carousel-fade .carousel-control {
+          z-index: 2;
+        }
+
+        a.carousel-control {
+            width: 5%;
+        }
+        .newTestResults h2 {
+            color: Black;
+            font-size: 14px;
+        }
+        .newTestResults table.table {
+            background-color: white;
+            color: black;
+        }
+        .newTestResults table.table td {
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            border-radius: 0px 0px;
+            font-size: 90%;
+            color: #888888;
+        }
+        .newTestResults table.table code {
+            border: none;
+            border-radius: 0px 0px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .loader {
+            font-size: 10px;
+            margin: 5em auto;
+            text-indent: -9999em;
+            width: 11em;
+            height: 11em;
+            border-radius: 50%;
+            background: #ffffff;
+            background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+            background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+            background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+            background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+            background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+            position: relative;
+            -webkit-animation: load3 1.4s infinite linear;
+            animation: load3 1.4s infinite linear;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        .loader:before {
+            width: 50%;
+            height: 50%;
+            background: #FFF;
+            border-radius: 100% 0 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+        }
+        .loader:after {
+            background-color: black;
+            width: 75%;
+            height: 75%;
+            border-radius: 50%;
+            content: '';
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        @-webkit-keyframes load3 {
+            0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            }
+            100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+            }
+        }
+        @keyframes load3 {
+            0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            }
+            100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+            }
+        }
+        h2 {cursor:pointer;}
+        #passedTests img {
+            margin-right: 3px;
+        }
+    </style>
+</head>
+<body style="background-color: black">
+    <div class="loader" style="display: none; position: absolute; left: 50%; top: 50%; z-index: 1"></div>
+    <div id="pages" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+        <!-- Wrapper for pages -->
+        <div class="carousel-inner text-center" role="listbox">
+            <div class="item active first-slide hide-next">
+                <div class="row" style="margin-top: 10px">
+                    <img src="images/SilverFern.jpg" />
+                </div>
+                <h1 style="text-align:center; color:#8D8D8D; font-size:80px"><strong>Code Blacks</strong></h1>
+                <a href="#pages" role="button" data-slide="next">Start</a>
+            </div>
+            <div class="item">
+                <h1 style="text-align:center; color:#8D8D8D;">Test Automation</h1>
+                <h2 style="text-align:center; color:#8D8D8D; margin-top:50px">&lt;30000 Tests</h2>
+                <h2 style="text-align:center; color:#8D8D8D; margin-top:50px; margin-bottom: 50px;">24 Hours to Run</h2>
+                <a href="#pages" role="button" data-slide="next">Test Cost</a>
+            </div>
+            <div class="item">
+                <h1 style="text-align:center; color:#8D8D8D">Test Cost</h1>
+                <h2 style="text-align:center; color:#8D8D8D; margin-top:50px">Time spent debugging tests: 20%</h2>
+                <h2 style="text-align:center; color:#8D8D8D; margin-top:50px">2330 days/year</h2>
+                <h2 style="text-align:center; color:#8D8D8D; margin-top:50px; margin-bottom: 50px">$700000/year</h2>
+                <a href="#pages" role="button" data-slide="next">Demo with RestSharp</a>
+            </div>
+            <div class="item hide-next">
+                <h1 style="text-align:center; color:#8D8D8D">Test Haystack</h1>
+                <div style="margin-left:5px; margin-right: 5px">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#collapseOne" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        Failed Tests (1)
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse in" role="tabpanel" aria-labelledby="headingOne" style="background-color: white">
+                                <div class="panel-body" style="text-align: left">                                    
+                                    <div class="form-inline">
+                                        <img src="Images/RedCross.jpg" BorderStyle="None" Height="15" ImageAlign="Baseline">
+                                        <a href="#pages" role="button" data-slide="next">RestSharp.IntegrationTests.FileTests.Handles_Binary_File_Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#passedTests" href="#passedTests" aria-expanded="false" aria-controls="passedTests">
+                                        Passed Tests (53)
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="passedTests" class="panel-collapse in" role="tabpanel" aria-labelledby="headingTwo" style="background-color: white">
+                                <div class="panel-body" style="text-align: left">
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Google_Weather_Xml</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Boolean_From_String</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Object_Type_Property_With_Primitive_Vale</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Mixture_Of_Empty_Elements_With_Attributes_And_Populated_Elements</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_with_leading_slash</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Boolean_From_Number</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NamespacedXmlTests.Can_Deserialize_Elements_With_Namespace_Autodetect_Namespace</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.POST_with_resource_containing_slashes</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.MultipartFormDataTests.MultipartFormDataAsync</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Nested_List_Items_With_Matching_Class_Name</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_DateTime</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_To_Dictionary_String_String_With_Dynamic_Values</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_with_Url_string_containing_tokens</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_TimeSpan</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_To_Dictionary_String_Object</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.RequestBodyTests.Can_Not_Be_Added_To_HEAD_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Root_Json_Array_To_Inherited_List</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_wth_trailing_slash_and_query_parameters</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Parentless_aka_Inline_List_Items_With_Matching_Class_Name</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.CompressionTests.Can_Handle_Deflate_Compressed_Content</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.oAuth1Tests.Use_RFC_3986_Encoding_For_Auth_Signature_Base</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_with_Uri_and_resource_containing_tokens</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Attributes_On_Default_Root</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_with_leading_slash_and_baseurl_trailing_slash</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Iso8601DateTimeZulu</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.StatusCodeTests.Handles_Different_Root_Element_On_Http_Error</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_with_resource_containing_slashes</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.RequestHeadTests.Passes_Default_Credentials_When_UseDefaultCredentials_Is_True</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_DateTimeOffset</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Lastfm_Xml</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.RequestHeadTests.Does_Not_Pass_Default_Credentials_When_Server_Does_Not_Negotiate</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Custom_Formatted_Date</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NuSpecUpdateTask+Execute+WhenSpecFileIsValid.PullsAuthorsFromAssemblyInfo</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Google_Weather_Xml_WithDeserializeAs</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Ignore_Protected_Property_That_Exists_In_Data</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NuSpecUpdateTask+Execute+WhenInformationalVersionIsNotDefined.PullsVersionAttributeInstead</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Nested_List_Items_With_Matching_Class_Name</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_To_Standalone_List_With_Matching_Class_Case</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncTests.Can_Cancel_GET_TaskAsync</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncTests.Handles_GET_Request_Errors_TaskAsync</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Ignore_Protected_Property_That_Exists_In_Data</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncRequestBodyTests.Can_Be_Added_To_OPTIONS_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Elements_to_Nullable_Values</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Eventful_Xml</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Guid_String_Fields</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NuSpecUpdateTask+Execute+WhenSpecFileIsValid.PullsVersionFromAssemblyInfo</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.AddRangeTests.ShouldParseOutRangeSpecifier</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.POST_with_leading_slash</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Empty_Elements_to_Nullable_Values</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Empty_Elements_With_Attributes_to_Nullable_Values</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Lower_Cased_Root_Elements_With_Dashes</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_with_empty_request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncTests.Can_Perform_GET_TaskAsync</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncRequestBodyTests.Can_Not_Be_Added_To_HEAD_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Root_Json_Array_To_List</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NuSpecUpdateTask+Execute+WhenSpecFileIsValid.PullsIdFromAssembly</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.RequestBodyTests.Can_Be_Added_To_PUT_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NuSpecUpdateTask+Execute+WhenSpecFileNotSpecified.ReturnsFalse</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_DateTimeOffset</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.CompressionTests.Can_Handle_Gzip_Compressed_Content</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.oAuth1Tests.Properly_Encodes_Parameter_Names</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Decimal_With_Four_Zeros_After_Floating_Point</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Names_With_Dashes_On_Default_Root</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Names_With_Underscores_Without_Matching_Case_On_Default_Root</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Parentless_aka_Inline_List_Items_Without_Matching_Class_Name</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.CompressionTests.Can_Handle_Uncompressed_Content</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncTests.Can_Perform_GetTaskAsync_With_Response_Type</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Ignore_Protected_Property_That_Exists_In_Data</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Empty_Elements_to_Nullable_Values</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Custom_Formatted_Date</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_4sq_Json_With_Root_Element_Specified</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NamespacedXmlTests.Can_Deserialize_List_Of_Primitives_With_Namespace</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NuSpecUpdateTask+Execute+WhenSpecFileIsValid.ReturnsTrue</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Attributes_On_Default_Root</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_with_empty_request_and_bare_hostname</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Names_With_Dashes_With_Default_Root_Alternative_Culture</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Generic_List_of_DateTime</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.SerializerTests.Can_serialize_simple_POCO</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_To_List_Inheritor_From_Custom_Root_With_Attributes</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Goodreads_Xml</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_DateTimeOffset</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NamespacedXmlTests.Can_Deserialize_Attributes_With_Namespace</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Names_With_Dashes_On_Default_Root</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.NonProtocolExceptionHandlingTests.Handles_Server_Timeout_Error_AsyncTask</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Lower_Cased_Root_Elements_With_Dashes</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Parentless_aka_Inline_List_Items_With_Matching_Class_Name</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Directly_To_Lists_Off_Root_Element</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.SerializerTests.Can_serialize_simple_POCO_With_DateFormat_Specified</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.RequestBodyTests.Can_Be_Added_To_OPTIONS_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.NonProtocolExceptionHandlingTests.Handles_Server_Timeout_Error</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.OAuthTests.UrlStrictEncode_Encodes_Correctly</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Simple_Generic_List_of_Simple_Types</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.RequestHeadTests.Does_Not_Pass_Default_Credentials_When_UseDefaultCredentials_Is_False</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.SerializerTests.Can_serialize_simple_POCO_With_XmlFormat_Specified</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Ignore_ReadOnly_Property_That_Exists_In_Data</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Boolean_From_String</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Names_With_Underscore_Prefix</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncRequestBodyTests.Can_Not_Be_Added_To_GET_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Nullable_DateTimeOffset_With_Null</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Generic_Members</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Names_With_Underscores_Without_Matching_Case_On_Default_Root</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.RequestBodyTests.Can_Be_Added_To_PATCH_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Lists_of_Simple_Types</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_with_Invalid_Url_string_throws_exception</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncTests.Handles_GET_Request_Errors_TaskAsync_With_Response_Type</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.RequestBodyTests.Can_Be_Added_To_DELETE_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Nested_List_Without_Elements_To_Empty_List</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Iso8601DateTimeLocal</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_To_Standalone_List_Without_Matching_Class_Case</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.SerializerTests.Can_serialize_simple_POCO_With_Attribute_Options_Defined_And_Property_Containing_IList_Elements</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Parentless_aka_Inline_List_Items_Without_Matching_Class_Name</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.MultipartFormDataTests.AlwaysMultipartFormData_WithParameter_Execute</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.RequestBodyTests.Can_Not_Be_Added_To_GET_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.Should_not_duplicate_question_mark</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Lists_of_Simple_Types</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Elements_On_Default_Root</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Use_DeserializeAs_Attribute</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.MultipartFormDataTests.MultipartFormData</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Names_With_Underscores_With_Default_Root_Alternative_Culture</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Nested_Class</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Names_With_Underscores_With_Default_Root</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Into_Struct</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_List_of_Guid</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Deserialization_Of_Undefined_Int_Value_Returns_Enum_Default</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Various_Enum_Types</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.NonProtocolExceptionHandlingTests.Handles_Server_Timeout_Error_Async</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.POST_with_querystring_containing_tokens</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Nullable_DateTimeOffset_With_Value</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.POST_with_resource_containing_tokens</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.RequestBodyTests.Can_Be_Added_To_POST_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Boolean_From_Number</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.SerializerTests.Can_serialize_Enum</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NamespacedXmlTests.Can_Deserialize_Elements_With_Namespace</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Parentless_aka_Inline_List_Items_With_Matching_Class_Name_With_Additional_Property</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NamespacedXmlTests.Ignore_ReadOnly_Property_That_Exists_In_Data</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_With_Default_Root_Alternative_Culture</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Nested_List_Items_Without_Matching_Class_Name</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_TimeSpan</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.SerializerTests.Can_serialize_a_list_which_is_the_root_element</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_To_Dictionary_String_String</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Nullable_DateTime_With_Value</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncTests.Can_Perform_GET_Async</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Elements_to_Nullable_Values</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_with_Uri_containing_tokens</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Select_Tokens</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncTests.Can_Timeout_GET_TaskAsync</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Empty_Elements_to_Nullable_Values</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Lastfm_Xml</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_with_resource_containing_null_token</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.MultipartFormDataTests.AlwaysMultipartFormData_WithParameter_ExecuteTaskAsync</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_with_multiple_instances_of_same_key</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Eventful_Xml</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_JsonNet_Dates</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Int_to_Bool</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.OAuthTests.PercentEncode_Encodes_Correctly</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NamespacedXmlTests.Ignore_Protected_Property_That_Exists_In_Data</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Simple_Generic_List_of_Simple_Types_With_Nulls</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Exponential_Notation</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Names_With_Dashes_With_Default_Root</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NuSpecUpdateTask+Execute+WhenSpecFileIsValid.PullsDescriptionFromAssembly</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Root_Elements_Without_Matching_Case_And_Dashes</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Elements_On_Default_Root</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Names_With_Underscores_On_Default_Root</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.RestRequestTests.Cannot_Set_Invalid_Host_Header</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_with_Url_string_and_resource_containing_tokens</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.RestRequestTests.Can_Add_Object_With_IntegerArray_property</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.RestRequestTests.Cannot_Set_Empty_Host_Header</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Nested_List_Without_Elements_To_Empty_List</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Various_Enum_Values</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Unix_Json_Dates</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Directly_To_Lists_Off_Root_Element</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Simple_Generic_List_Given_Item_Without_Array</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.NonProtocolExceptionHandlingTests.Task_Handles_Non_Existent_Domain</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Elements_to_Nullable_Values</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Ignore_ReadOnly_Property_That_Exists_In_Data</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Dictionary_of_Lists</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncRequestBodyTests.Can_Be_Added_To_DELETE_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Nullable_DateTime_With_Null</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.MultipartFormDataTests.AlwaysMultipartFormData_WithParameter_ExecuteAsync</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Lists_of_Simple_Types</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_TimeSpan</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.POST_with_leading_slash_and_baseurl_trailing_slash</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.SerializerTests.Can_serialize_simple_POCO_With_Different_Root_Element</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_From_Root_Element</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Google_Weather_Xml</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Parentless_aka_Inline_List_Items_With_Matching_Class_Name_With_Additional_Property</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncRequestBodyTests.Can_Be_Added_To_POST_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_To_List_Inheritor_From_Custom_Root_With_Attributes</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Empty_Elements_With_Attributes_to_Nullable_Values</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Names_With_Underscores_On_Default_Root</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.InterfaceImplementationTests.IRestSharp_Has_All_RestSharp_Signatures</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AuthenticationTests.Can_Authenticate_With_Basic_Http_Auth</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Inline_List_Without_Elements_To_Empty_List</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Iso_Json_Dates</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncRequestBodyTests.Can_Be_Added_To_PATCH_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Mixture_Of_Empty_Elements_With_Attributes_And_Populated_Elements</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncRequestBodyTests.Can_Be_Added_To_PUT_Request</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.SerializerTests.Can_serialize_simple_POCO_With_Attribute_Options_Defined</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncTests.Can_Perform_GET_Async_Without_Async_Handle</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncTests.Can_Perform_ExecuteGetTaskAsync_With_Response_Type</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncTests.Can_Timeout_PUT_TaskAsync</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.RestRequestTests.Can_Set_Valid_Host_Header</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.NonProtocolExceptionHandlingTests.Handles_Server_Timeout_Error_With_Deserializer</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Null_Elements_to_Nullable_Values</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NamespacedXmlTests.Can_Deserialize_Names_With_Underscores_With_Namespace</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_With_Default_Root</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Simple_Generic_List_Given_Toplevel_Item_Without_Array</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Nested_List_Items_Without_Matching_Class_Name</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.UrlBuilderTests.GET_with_resource_containing_tokens</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.StatusCodeTests.Handles_Default_Root_Element_On_No_Error</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.StatusCodeTests.Handles_GET_Request_404_Error</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.NonProtocolExceptionHandlingTests.Handles_Non_Existent_Domain</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncTests.Can_Cancel_GET_TaskAsync_With_Response_Type</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.StatusCodeTests.Handles_GET_Request_404_Error_With_Body</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.NuSpecUpdateTask+Execute+WhenSpecFileIsValid.UpdatesSpecFile</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.SerializerTests.Serializes_Properties_In_Specified_Order</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Into_Struct</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Json_Using_DeserializeAs_Attribute</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_To_Standalone_List_With_Matching_Class_Case</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_Root_Elements_Without_Matching_Case_And_Dashes</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlDeserializerTests.Can_Deserialize_To_Standalone_List_Without_Matching_Class_Case</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Inline_List_Without_Elements_To_Empty_List</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.XmlAttributeDeserializerTests.Can_Deserialize_Custom_Formatted_Date</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Ignore_ReadOnly_Property_That_Exists_In_Data</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Iso8601DateTimeWithOffset</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.Tests.JsonTests.Can_Deserialize_Quoted_Primitive</div>
+                                    <div class="form-inline"><img src="Images/GreenTick.jpg" borderstyle="None" height="15" imagealign="Baseline">RestSharp.IntegrationTests.AsyncTests.Can_Handle_Exception_Thrown_By_OnBeforeDeserialization_Handler</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item newTestResults">
+                <h1 style="text-align:center; color:#8D8D8D">Haystack Results</h1>
+                <div id="newTestResultsContainer" style="background-color: white; margin-left:5px; margin-right: 5px"></div>
+            </div>
+            <div class="item hide-next">
+                <h1 style="text-align:center; color:#8D8D8D">Haystack Technology</h1>
+                <div class="container" style="height: 400px; width: 500px; border-radius:5px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="423px" height="383px" version="1.1">
+                        <defs />
+                        <g transform="translate(0.5,0.5)">
+                            <rect x="151" y="1" rx="9" ry="9" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none" />
+                            <g transform="translate(171,24)">
+                                <switch>
+                                    <foreignObject pointer-events="all" width="79" height="17" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #2A9FD6; font-weight:bold; line-height: 1.26; vertical-align: top; width: 79px; white-space: normal; text-align: center;">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Test Results</div>
+                                        </div>
+                                    </foreignObject>
+                                    <text x="40" y="15" fill="#2A9FD6" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+                                </switch>
+                            </g>
+                            <rect x="151" y="91" width="120" rx="9" ry="9" height="60" fill="#ffffff" stroke="#000000" pointer-events="none" />
+                            <g transform="translate(152,99)">
+                                <switch>
+                                    <foreignObject pointer-events="all" width="118" height="47" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; font-weight:bold; color: #2A9FD6; line-height: 1.26; vertical-align: top; width: 117px; white-space: normal; text-align: center;">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">
+                                                Code Blacks Website
+                                                <div>(Azure Web App)</div>
+                                            </div>
+                                        </div>
+                                    </foreignObject>
+                                    <text x="59" y="30" fill="#2A9FD6" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+                                </switch>
+                            </g>
+                            <rect x="1" y="211" rx="9" ry="9" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none" />
+                            <g transform="translate(12,219)">
+                                <switch>
+                                    <foreignObject pointer-events="all" width="98" height="47" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-weight:bold; font-size: 12px; font-family: Helvetica; color: #2A9FD6; line-height: 1.26; vertical-align: top; width: 98px; white-space: normal; text-align: center;">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">
+                                                Test Zips<div>
+                                                    <br />
+                                                </div><div>(Azure Storage)</div>
+                                            </div>
+                                        </div>
+                                    </foreignObject>
+                                    <text x="49" y="30" fill="#2A9FD6" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+                                </switch>
+                            </g>
+                            <path d="M 211 61 L 211 84.63" fill="none" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <path d="M 211 89.88 L 207.5 82.88 L 211 84.63 L 214.5 82.88 Z" fill="#2A9FD6" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <path d="M 211 151 L 66.91 208.63" fill="none" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <path d="M 62.04 210.58 L 67.24 204.74 L 66.91 208.63 L 69.84 211.23 Z" fill="#2A9FD6" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <g transform="translate(114,180)">
+                                <switch>
+                                    <foreignObject pointer-events="all" width="45" height="17" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-weight:bold; font-size: 12px; font-family: Helvetica; color: #2A9FD6; line-height: 1.26; vertical-align: top; white-space: nowrap; text-align: center;">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#000000;">1. Write</div>
+                                        </div>
+                                    </foreignObject>
+                                    <text x="15" y="15" fill="#2A9FD6" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+                                </switch>
+                            </g>
+                            <rect x="151" y="211" rx="9" ry="9" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none" />
+                            <g transform="translate(151,219)">
+                                <switch>
+                                    <foreignObject pointer-events="all" width="119" height="47" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-weight:bold; font-size: 12px; font-family: Helvetica; color: #2A9FD6; line-height: 1.26; vertical-align: top; width: 117px; white-space: normal; text-align: center;">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">
+                                                Run &amp; Compare Tests<div>
+                                                    <span style="line-height: 1.26">(Azure Queue)</span>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </foreignObject>
+                                    <text x="60" y="30" fill="#2A9FD6" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+                                </switch>
+                            </g>
+                            <rect x="301" y="211" rx="9" ry="9" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none" />
+                            <g transform="translate(312,219)">
+                                <switch>
+                                    <foreignObject pointer-events="all" width="98" height="47" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-weight:bold; font-size: 12px; font-family: Helvetica; color: #2A9FD6; line-height: 1.26; vertical-align: top; width: 98px; white-space: normal; text-align: center;">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">
+                                                Test Results<div>
+                                                    <br />
+                                                </div><div>(Azure Storage)</div>
+                                            </div>
+                                        </div>
+                                    </foreignObject>
+                                    <text x="49" y="30" fill="#2A9FD6" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+                                </switch>
+                            </g>
+                            <path d="M 211 151 L 211 204.63" fill="none" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <path d="M 211 209.88 L 207.5 202.88 L 211 204.63 L 214.5 202.88 Z" fill="#2A9FD6" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <g transform="translate(191,181)">
+                                <switch>
+                                    <foreignObject pointer-events="all" width="54" height="17" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-weight:bold; font-size: 12px; font-family: Helvetica; color: #2A9FD6; line-height: 1.26; vertical-align: top; white-space: nowrap; text-align: center;">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#000000;">2. Publish</div>
+                                        </div>
+                                    </foreignObject>
+                                    <text x="22" y="15" fill="#2A9FD6" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+                                </switch>
+                            </g>
+                            <path d="M 211 151 L 355.09 208.63" fill="none" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <path d="M 359.96 210.58 L 352.16 211.23 L 355.09 208.63 L 354.76 204.74 Z" fill="#2A9FD6" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <g transform="translate(263,173)">
+                                <switch>
+                                    <foreignObject pointer-events="all" width="45" height="17" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-weight:bold; font-size: 12px; font-family: Helvetica; color: #2A9FD6; line-height: 1.26; vertical-align: top; white-space: nowrap; text-align: center;">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#000000;">6. Read</div>
+                                        </div>
+                                    </foreignObject>
+                                    <text x="16" y="15" fill="#2A9FD6" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+                                </switch>
+                            </g>
+                            <rect x="151" y="321" rx="9" ry="9" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none" />
+                            <g transform="translate(151,329)">
+                                <switch>
+                                    <foreignObject pointer-events="all" width="119" height="47" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-weight:bold; font-size: 12px; font-family: Helvetica; color: #2A9FD6; line-height: 1.26; vertical-align: top; width: 117px; white-space: normal; text-align: center;">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">
+                                                Code Blacks Analyzer<div>
+                                                    <div>
+                                                        <span style="line-height: 1.26">(Azure Web Job)</span>
+                                                        <br />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </foreignObject>
+                                    <text x="60" y="30" fill="#2A9FD6" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+                                </switch>
+                            </g>
+                            <path d="M 211 321 L 211 277.37" fill="none" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <path d="M 211 272.12 L 214.5 279.12 L 211 277.37 L 207.5 279.12 Z" fill="#2A9FD6" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <g transform="translate(180,285)">
+                                <switch>
+                                    <foreignObject pointer-events="all" width="70" height="17" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-weight:bold; font-size: 12px; font-family: Helvetica; color: #2A9FD6; line-height: 1.26; vertical-align: top; white-space: nowrap; text-align: center;">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#000000;">3. Subscribe</div>
+                                        </div>
+                                    </foreignObject>
+                                    <text x="29" y="15" fill="#2A9FD6" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+                                </switch>
+                            </g>
+                            <path d="M 211 321 L 67.04 273.01" fill="none" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <path d="M 62.06 271.35 L 69.81 270.25 L 67.04 273.01 L 67.59 276.89 Z" fill="#2A9FD6" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <g transform="translate(120,291)">
+                                <switch>
+                                    <foreignObject pointer-events="all" width="45" height="17" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-weight:bold; font-size: 12px; font-family: Helvetica; color: #2A9FD6; line-height: 1.26; vertical-align: top; white-space: nowrap; text-align: center;">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#000000;">4. Read</div>
+                                        </div>
+                                    </foreignObject>
+                                    <text x="16" y="15" fill="#2A9FD6" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+                                </switch>
+                            </g>
+                            <path d="M 211 321 L 354.96 273.01" fill="none" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <path d="M 359.94 271.35 L 354.41 276.89 L 354.96 273.01 L 352.19 270.25 Z" fill="#2A9FD6" stroke="#2A9FD6" stroke-miterlimit="10" pointer-events="none" />
+                            <g transform="translate(290,289)">
+                                <switch>
+                                    <foreignObject pointer-events="all" width="45" height="17" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-weight:bold; font-size: 12px; font-family: Helvetica; color: #2A9FD6; line-height: 1.26; vertical-align: top; white-space: nowrap; text-align: center;">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#000000;">5. Write</div>
+                                        </div>
+                                    </foreignObject>
+                                    <text x="15" y="15" fill="#2A9FD6" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+                                </switch>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <h4 style="text-align:center; color:#8D8D8D">Visual Studio 2015</h4>
+                <h4 style="text-align:center; color:#8D8D8D">OpenCover, ReportGenerator, DiffPlex</h4>
+                <a href="#pages" role="button" data-slide="next">Haystack Benefits</a>
+            </div>
+            <div class="item">
+                <h1 style="text-align:center; color:#8D8D8D">Haystack Benefits</h1>
+                <h2 style="text-align:center; color:#8D8D8D; margin-top:50px">Cuts debugging tests by 40%</h2>
+                <h2 style="text-align:center; color:#8D8D8D; margin-top:50px">$500000 return</h2>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a id="previousButton" class="left carousel-control" href="#pages" role="button" data-slide="prev" style="display: none; bottom: auto; top: 45px">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a id="nextButton" class="right carousel-control" href="#pages" role="button" data-slide="next" style="display: none; bottom: auto; top: 45px">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <script id="testResultsTemplate" type="text/x-jsrender">
+        {{for fileDifferences}}
+            <h4 style="color: black; background-color: #8D8D8D;">{{>FileName}}</h4>
+            <div class="container-fluid collapse in" style="background-color:white; text-align:left;">
+                <div class="row">
+                    <div class="col-md-6" style="overflow: auto">
+                        {{for Differences.OldText.Lines}}
+                            {{:Text || '<tr><td class="gray">&nbsp;</td></tr>'}}
+                        {{/for}}
+                            
+                    </div>
+                    <div class="col-md-6" style="overflow: auto">
+                        {{for Differences.NewText.Lines}}
+                            {{:Text || '<tr><td class="gray">&nbsp;</td></tr>'}}
+                        {{/for}}
+                    </div>
+                </div>
+            </div>
+        {{/for}}
+    </script>
+    <script type="text/javascript" src="Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/jsrender.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#pages").on("slide.bs.carousel", function () {
+                $(".loader").show();
+            }).on("slid.bs.carousel", function () {
+                if ($(".active.first-slide").length) {
+                    $("#previousButton").hide();
+                } else {
+                    $("#previousButton").show();
+                }
+                if ($(".active.hide-next").length) {
+                    $("#nextButton").hide();
+                } else {
+                    $("#nextButton").show();
+                }
+                $(".loader").hide();
+            });
+            $.ajax({
+                url: 'api/testcomparison/restsharp',
+                success: function (result) {
+                    $("#newTestResultsContainer").html($("#testResultsTemplate").render({ fileDifferences: result }));
+                    $("table.lineAnalysis").addClass("table");
+                    $("table.lineAnalysis thead").hide();
+                }
+            });
+
+            $("h2").click(function() {
+                $(this).removeClass().addClass('bounce animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                    $(this).removeClass();
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>

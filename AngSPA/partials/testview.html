@@ -1,0 +1,21 @@
+<!--i>Click on a test to view code coverage.</i--->
+<br /> <br />
+<div ng-repeat="test in tests" class="nameContainer" test_id="{{test.id}}" links>
+
+    <div class="testNameContainer">
+        <div class="testLinkContainer">
+            <div class=testName">
+                <b>{{test.name}}</b> <br />
+            </div>
+            {{test.desc}}
+        </div>
+        <div class="goDiffsContainer">
+            <div class="goDiffsButton">
+                <div class="goDiffsLink">
+                    <a href="#test/{{test.id}}">View Coverage Diff</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p>Author: {{ author }}</p>

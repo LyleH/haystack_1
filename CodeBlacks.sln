@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBlacks.BusinessRules", "CodeBlacks.BusinessRules\CodeBlacks.BusinessRules.csproj", "{7ED520F4-375B-45AD-9784-2B7DF459058C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBlacks.Tests", "CodeBlacks.Tests\CodeBlacks.Tests.csproj", "{53AA2B68-A555-416C-B29E-FF3B845C715E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBlacks.Harness", "CodeBlacks.Harness\CodeBlacks.Harness.csproj", "{3C7180D4-B02A-422A-9467-D6953ACFB6B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBlacks.WebJob", "CodeBlacks.WebJob\CodeBlacks.WebJob.csproj", "{B3AD868E-D5D5-4A47-8564-A9C90744B7A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBlacks.Web", "CodeBlacks.Web\CodeBlacks.Web.csproj", "{62FA5065-9408-4762-8487-FE0BC685E2DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBlacks.Console", "CodeBlacks.Console\CodeBlacks.Console.csproj", "{AD572B9A-936C-4D5D-B025-865896D1449E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBlacks2", "WebBlacks2\WebBlacks2.csproj", "{CCDE8829-D8F4-4F1E-80D5-6D46DBACF3F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7ED520F4-375B-45AD-9784-2B7DF459058C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED520F4-375B-45AD-9784-2B7DF459058C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED520F4-375B-45AD-9784-2B7DF459058C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED520F4-375B-45AD-9784-2B7DF459058C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53AA2B68-A555-416C-B29E-FF3B845C715E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53AA2B68-A555-416C-B29E-FF3B845C715E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53AA2B68-A555-416C-B29E-FF3B845C715E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53AA2B68-A555-416C-B29E-FF3B845C715E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C7180D4-B02A-422A-9467-D6953ACFB6B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C7180D4-B02A-422A-9467-D6953ACFB6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C7180D4-B02A-422A-9467-D6953ACFB6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C7180D4-B02A-422A-9467-D6953ACFB6B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3AD868E-D5D5-4A47-8564-A9C90744B7A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3AD868E-D5D5-4A47-8564-A9C90744B7A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3AD868E-D5D5-4A47-8564-A9C90744B7A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3AD868E-D5D5-4A47-8564-A9C90744B7A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62FA5065-9408-4762-8487-FE0BC685E2DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62FA5065-9408-4762-8487-FE0BC685E2DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62FA5065-9408-4762-8487-FE0BC685E2DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62FA5065-9408-4762-8487-FE0BC685E2DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD572B9A-936C-4D5D-B025-865896D1449E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD572B9A-936C-4D5D-B025-865896D1449E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD572B9A-936C-4D5D-B025-865896D1449E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD572B9A-936C-4D5D-B025-865896D1449E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCDE8829-D8F4-4F1E-80D5-6D46DBACF3F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCDE8829-D8F4-4F1E-80D5-6D46DBACF3F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCDE8829-D8F4-4F1E-80D5-6D46DBACF3F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCDE8829-D8F4-4F1E-80D5-6D46DBACF3F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

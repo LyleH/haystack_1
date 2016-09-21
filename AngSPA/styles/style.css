@@ -1,0 +1,78 @@
+body{
+    background : #5b5b5b;
+    font-family: Arial, Helvetica, Times New Roman;
+    font-size: 13px;
+}
+
+h4.about{
+    margin-bottom: 3px;
+}
+
+div#outer {
+    background: #3B3B3B;
+    width: 900px;
+    margin: 0 auto;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+div#inner {
+    width: 855px;
+    margin: 0 auto;
+}
+
+div.testNameContainer {
+    width : 500px;
+    border-radius: 5px;
+    background : white;
+    margin-bottom : 30px;
+}
+
+div.testLinkContainer {
+    padding-top : 15px;
+    padding-left : 25px;
+    padding-right : 25px;
+    height: 60px;
+}
+
+div.goDiffsContainer {
+    padding-bottom : 15px;
+    padding-left : 25px;
+    padding-right : 25px;
+    height: 25px;
+}
+
+div.goDiffsButton {
+    border-radius : 4px;
+    background : #EF5752;
+    margin : 0px;
+    padding: 5px;
+    font : 10px "Trebuchet MS", sans-serif;
+    height : 15px;
+    width : 100px;
+}
+
+div.testName {
+    margin : 0px;
+    font : 30px "Trebuchet MS", sans-serif;
+}
+
+p.testLink {
+    font : 25px "Trebuchet MS", sans-serif;
+}
+
+a:link {
+    color : white;
+    text-decoration: none;
+}
+
+a:visited {
+    color : white;
+    text-decoration: none;
+}
+
+div.goDiffsLink {
+    font : 10px sans-serif;
+    color : white;
+    margin-bottom : 10px;
+}
